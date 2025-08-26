@@ -33,12 +33,31 @@ my_project/: Thư mục gốc của dự án.
     + backend/: Thư mục dành riêng cho các bài kiểm thử backend, ví dụ như kiểm thử API
 
 # Các bước chạy
-python3 -m venv venv // tạo môi trường ảo
-source venv/Scripts/activate // connect vào môi trường ảo
-pip install -r requirements.txt // install thư viện test
-playwright install // install thư viện test FE
-pytest // chạy test toàn bộ
-pytest tests/frontend/ // chạy test FE
-pytest tests/frontend/test_google_page.py // Chạy test file riêng
-pytest tests/frontend/test_google_page.py -k "test_google_search_page_title"  // chạy cụ thể 1 function
-deactivate // để stop môi trường
+```
+# tạo môi trường ảo
+python3 -m venv venv
+
+# connect vào môi trường ảo
+source venv/Scripts/activate
+
+# install thư viện test
+pip install -r requirements.txt 
+
+# install thư viện test FE
+playwright install 
+
+# chạy test toàn bộ
+pytest
+
+# chạy test FE
+pytest tests/frontend/ 
+
+# Chạy test file riêng
+pytest tests/frontend/test_google_page.py 
+
+# chạy cụ thể 1 function
+pytest tests/frontend/test_google_page.py -k "test_google_search_page_title"
+
+# để stop môi trường
+deactivate
+```
