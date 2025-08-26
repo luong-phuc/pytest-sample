@@ -1,5 +1,5 @@
 import pytest
-from config.settings import settings
+from config import settings
 
 @pytest.fixture(scope="session")
 def app_settings():

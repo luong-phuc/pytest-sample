@@ -25,6 +25,7 @@ my_project/: Thư mục gốc của dự án.
 - .env: File chứa các biến môi trường nhạy cảm như URL, API keys. File này phải được thêm vào .gitignore.
 - pytest.ini: File cấu hình cho pytest. Bạn có thể tùy chỉnh cách pytest tìm kiếm và chạy các bài kiểm thử tại đây.
 - config/: Thư mục chứa các thiết lập cấu hình của dự án.
+    + __init__.py: Load những module cần thiết bên trong như settings.py
     + settings.py: File đọc các biến từ .env và cung cấp chúng cho ứng dụng.
 - src/: Thư mục chứa mã nguồn chính của ứng dụng.
     + tests/: Thư mục chứa tất cả các bài kiểm thử.
@@ -41,19 +42,19 @@ python3 -m venv venv
 source venv/Scripts/activate
 
 # install thư viện test
-pip install -r requirements.txt 
+pip install -r requirements.txt
 
 # install thư viện test FE
-playwright install 
+playwright install
 
 # chạy test toàn bộ
 pytest
 
 # chạy test FE
-pytest tests/frontend/ 
+pytest tests/frontend/
 
 # Chạy test file riêng
-pytest tests/frontend/test_google_page.py 
+pytest tests/frontend/test_google_page.py
 
 # chạy cụ thể 1 function
 pytest tests/frontend/test_google_page.py -k "test_google_search_page_title"
