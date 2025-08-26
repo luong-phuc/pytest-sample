@@ -1,4 +1,5 @@
 # Cấu trúc thư mục :
+```
 my_project/
 ├── .env
 ├── .gitignore
@@ -18,6 +19,7 @@ my_project/
     └── backend/
         ├── __init__.py
         └── test_api.py
+```
 
 my_project/: Thư mục gốc của dự án.
 - .env: File chứa các biến môi trường nhạy cảm như URL, API keys. File này phải được thêm vào .gitignore.
